@@ -1,16 +1,54 @@
-# React + Vite
+# Tip Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, beginner-friendly tip calculator built with React + Tailwind CSS.
 
-Currently, two official plugins are available:
+🔗 **Live demo:** https://tip-calculator-react-cyan.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![alt text](image.png)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Enter a bill amount
+- Pick a tip percentage (10% / 15% / 20%) with the active choice highlighted
+- See tip amount and total calculated instantly, no page reload
 
-## Expanding the ESLint configuration
+## Tech stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React](https://react.dev/) (Vite)
+- [Tailwind CSS](https://tailwindcss.com/) v4
+- [Biome](https://biomejs.dev/) for linting and formatting
+- Deployed on [Vercel](https://vercel.com/)
+
+## Running locally
+
+```bash
+git clone <your-repo-url>
+cd react_tip_calculator
+npm install
+npm run dev
+```
+
+Then open the local URL Vite prints in the terminal.
+
+## Build
+
+```bash
+npm run build
+```
+
+Outputs a production build to `dist/`.
+
+## Lint / format
+
+```bash
+npm run lint      # check
+npm run format    # fix + format
+```
+
+## What I learned building this
+
+- `useState` for controlled inputs and derived values (calculating tip/total from state on every render, no extra state needed)
+- Conditional Tailwind classes for active/selected button styling
+- Rendering a list with `.map()` instead of repeating JSX
+- Setting up a Vite + React + Tailwind v4 project from scratch
+- Deploying a static frontend via GitHub → Vercel with auto-deploy on push
